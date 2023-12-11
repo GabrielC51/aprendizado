@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: white;
+            background-color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        h1{
+            font-size: 32px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('qual o seu nome?')
+        var valor = window.prompt('qual valor vc deseja gastar?')
+        var anos = Number(window.prompt(`em quantos anos você, ${nome}, teria que gastar ${valor.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}?`))
+        var gasto = valor/(365.4 * anos)
+        document.write(`você, ${nome}, teria que gastar ${gasto.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})} por dia para conseguir gastar ${valor.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})} em ${anos} anos`)
+    </script>
+    <br><h1>agora lê isso aqui: </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolorum itaque esse culpa similique adipisci, consequatur aliquam velit corporis voluptates quo unde a at, dolores, saepe maiores alias laborum quaerat? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, culpa laboriosam eveniet soluta perspiciatis, ipsam pariatur minus assumenda ratione, in nobis cumque quia ipsum hic asperiores nihil deleniti eligendi earum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat sint et culpa quas similique numquam officia blanditiis harum at accusantium, enim est aperiam quo tempore ipsa earum impedit ducimus commodi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quae ratione praesentium a vitae nisi ipsa dolorem. Quas, neque corporis illo consectetur, est odit exercitationem obcaecati praesentium sit veritatis repudiandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nostrum esse quas exercitationem optio libero magni voluptatem? Amet placeat exercitationem labore rerum! Fugit odio iste aliquid, dicta voluptatem tempore impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis culpa libero vel nisi aspernatur sit quas sequi officiis similique, itaque natus repellendus sed ipsa explicabo possimus dolor assumenda neque.</p>
+    
+</body>
+</html>
