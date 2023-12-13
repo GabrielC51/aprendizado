@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <p>Velocidade: 
+    <input type="number" name="txtvel" id="txtvel"> Km/h</p>
+    <input type="button" value="Verificar" onclick="calc()">
+    <div id="res"><p>Resposta</p></div>
+    <script>
+        var limite = 60
+        function calc(){
+            var txtv = document.querySelector('input#txtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Você está a <strong>${vel}Km/h</strong></p>`
+            if(vel > limite){
+                var dif = vel - limite
+                var multa = dif * 3.50
+                res.innerHTML += `<p>Você levará uma <strong>multa</strong> no valor de ${multa.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} por estar a <strong>${dif}Km/h</strong> acima do limite de velocidade (${limite} Km/h)</p>`
+            }
+        }
+    </script>
+</body>
+</html>

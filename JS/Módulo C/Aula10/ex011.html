@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 14px Arial;
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .bnt{
+            width: 75px;
+            height: 40px;
+            border-radius: 20px;
+            /*background-color: rgb(87, 77, 77);*/
+            margin-top: 20px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora muito Foda</h1>
+    <div>
+        N1: <input type="number" name="txtn1" id="txtn1"> +
+        N2: <input type="number" name="txtn2" id="txtn2"> <br>
+        <input type="button" value="Somar" onclick="somar()" class="bnt">
+        <input type="button" value="Subtrair" onclick="sub()" class="bnt">
+        <input type="button" value="Multiplicar" onclick="mult()" class="bnt">
+        <input type="button" value="Dividir" onclick="dividir()" class="bnt">
+        
+        <input type="button" value="Potência" onclick="pot()" class="bnt">
+        <input type="button" value="Raiz" onclick="raiz()" class="bnt">
+        <input type="button" value="Resto" onclick="resto()" class="bnt">
+        <div id = "res">Resultado aparecerá aqui</div>
+    <div>
+    
+    <script>
+        var tn1 = document.getElementById('txtn1') 
+        var tn2 = document.querySelector('input#txtn2')
+        var res = document.querySelector('div#res')
+        function somar(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var r = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong> ${r} <strong>`
+        }
+        function sub(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var r = n1 - n2
+            res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a <strong> ${r} <strong>`
+        }
+        function mult(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var r = n1 * n2
+            res.innerHTML = `${n1} vezes ${n2} é igual a <strong> ${r} <strong>`
+        }
+        function dividir(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var r = n1 / n2
+            res.innerHTML = `${n1} dividido ${n2} é igual a <strong> ${r} <strong>`
+        }
+        function pot(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var r = n1 ** n2
+            res.innerHTML = `${n1} elevado a ${n2} é igual a <strong> ${r} <strong>`
+        }
+        function raiz(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var r = n1 ** (1/n2)
+            res.innerHTML = `A raiz ${n2}ª de ${n1} é igual a <strong> ${r} <strong>`
+        }
+        function resto(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var r = n1 % n2
+            res.innerHTML = `O resto de ${n1} dividido por ${n2} é igual a <strong> ${r} <strong>`
+        }
+    </script>
+
+</body>
+</html>
